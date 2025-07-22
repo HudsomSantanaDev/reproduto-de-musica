@@ -1,9 +1,18 @@
-let correntMusic=document.querySelector('audio');
+let correntMusic = document.querySelector('audio');
 
+// funciona
+//os icones que nao estao reagindo ao click
+//solucao:trocar os icones externos para icones internos armazenados no computador!!!!!
 document.querySelector(".botao-play").addEventListener('click', playMusic);
 
-function playMusic(){
-    alert("evento acionado");
+/*document.querySelector('.botao-play').addEventListener("click",iniciarMusica);
+function iniciarMusica(){
     correntMusic.play();
-    document.querySelector('.botao-pause').style.display='block';
+}*/
+
+function playMusic() {
+    console.log("oi");
+    correntMusic.play();
+    document.querySelector('.botao-pause').style.display = 'block';
+    document.querySelector('.botao-play').style.display="none";
 }
