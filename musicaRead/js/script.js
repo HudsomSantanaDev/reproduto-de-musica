@@ -1,4 +1,4 @@
-let correntMusic = document.querySelector('audio');
+let correntMusic = document.querySelector('button');
 
 // funciona
 //os icones que nao estao reagindo ao click
