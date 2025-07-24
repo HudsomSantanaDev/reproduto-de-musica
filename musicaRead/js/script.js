@@ -7,7 +7,7 @@ document.querySelector(".botao-pause").addEventListener("click", pausarMusica);
 
 correntMusic.addEventListener('timeupdate', atualizarBarra);
 
-
+//proximo passo Selecionar imagem
 musicDuration.textContent = secondToMinutes(Math.floor(correntMusic.duration));
 
 
