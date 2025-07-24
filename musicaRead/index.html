@@ -4,20 +4,26 @@ unplash - imagens
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--lins para font(googleFonts)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
 
     <!--link para estilos-->
     <link rel="stylesheet" href="style.css">
     <!--link para icons-->
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
     <title>MusicRead</title>
 </head>
+
 <body>
     <img src="img/ahmed-saeed-3oY6iqvc2sg-unsplash.jpg" alt="palmeira">
     <div class="description">
@@ -35,13 +41,15 @@ unplash - imagens
         </div>
     </div>
     <div class="player">
-     
-        <!--esquerda--><button class="fa fa-step-backward setas " aria-hidden="true"></button>
-        <!--pausar--><button class="fa fa-pause  botao-pause " aria-hidden="true"></button>
-        <!--direita--><button class="fa fa-step-forward setas " aria-hidden="true"></button>
-        
-    </div>
-   <audio  src="music/Brave - Mark Karan, Scott Guberman, Angeline Saris, Jeremy Hoenig.mp3" ></audio>
- <script src="js/script.js"></script>
+        <!--esquerda-->  <i class="setas " ></i>
+        <!--comecar--> <i class="   botao-play" ></i>
+        <!--pausar--><i class="
+          botao-pause"  > </i>
+        <!--direita--><i class=" setas " src="img/retroceder.png" >
+            <img src="img/retroceder.png" alt="" srcset="">
+            </i>
+    <audio  id="audio"src="music/Brave - Mark Karan, Scott Guberman, Angeline Saris, Jeremy Hoenig.mp3"></audio>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
