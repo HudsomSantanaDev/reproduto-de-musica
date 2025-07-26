@@ -34,6 +34,8 @@ let musics=[
         }
 ];
 
+renderizarMusica(indexMusic);
+
 
 document.querySelector(".botao-play").addEventListener("click", iniciarMusica);
 
@@ -46,22 +48,30 @@ musicDuration.textContent = secondToMinutes(Math.floor(correntMusic.duration));
 
 document.getElementById('anterior').addEventListener("click",()=>{
     indexMusic--;
+    if(indexMusic<0){
+        indexMusic=2;
+    }
 renderizarMusica(indexMusic);
 
 });
 document.getElementById("proximo").addEventListener("click",()=>{
     indexMusic++;
+     if(indexMusic>2
+     ){
+        indexMusic=0;
+    }
 renderizarMusica(indexMusic);
 });
 
 function renderizarMusica(index){
-    //erro ao ler src
+    
 correntMusic.setAttribute('src',musics[index].src);
 correntMusic.addEventListener('loadeddata',()=>{
     musicName.textContent=musics[index].titulo;
     artist.textContent=musics[index].artist;
     image.src=musics[index].img;
     parseInt( musicDuration.textContent = secondToMinutes(Math.floor(correntMusic.duration)));
+    iniciarMusica(indexMusic);
 });
 }
 
