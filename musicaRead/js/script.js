@@ -4,6 +4,7 @@ let image=document.querySelector('img');
 let musicName=document.querySelector('.description h2');
 let artist=document.querySelector('.description i');
 let indexMusic=0;
+
 let musics=[
     {
         titulo:'Brave',artist:'Karan, Scott Guberman, Angeline Saris, Jeremy Hoenig',src:'music/Brave - Mark Karan, Scott Guberman, Angeline Saris, Jeremy Hoenig.mp3',img:'img/ahmed-saeed-3oY6iqvc2sg-unsplash.jpg'
@@ -34,6 +35,7 @@ let musics=[
         }
 ];
 
+let lastMusic=parseInt(musics.length);
 renderizarMusica(indexMusic);
 
 
@@ -57,11 +59,16 @@ renderizarMusica(indexMusic);
 document.getElementById("proximo").addEventListener("click",()=>{
     indexMusic++;
    //se chegar na ultima musica o que fazer?????
+   
+  
 renderizarMusica(indexMusic);
 });
 
 function renderizarMusica(index){
-    
+    //não volta apo primeiro
+     if(musics[index]==lastMusic){
+    index=musics[0];
+   }
 correntMusic.setAttribute('src',musics[index].src);
 correntMusic.addEventListener('loadeddata',()=>{
     musicName.textContent=musics[index].titulo;
