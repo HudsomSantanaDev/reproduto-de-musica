@@ -49,17 +49,14 @@ musicDuration.textContent = secondToMinutes(Math.floor(correntMusic.duration));
 document.getElementById('anterior').addEventListener("click",()=>{
     indexMusic--;
     if(indexMusic<0){
-        indexMusic=2;
+    indexMusic=2;
     }
 renderizarMusica(indexMusic);
 
 });
 document.getElementById("proximo").addEventListener("click",()=>{
     indexMusic++;
-     if(indexMusic>2
-     ){
-        indexMusic=0;
-    }
+   //se chegar na ultima musica o que fazer?????
 renderizarMusica(indexMusic);
 });
 
